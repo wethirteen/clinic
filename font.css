@@ -1,0 +1,126 @@
+body {
+  font-family: 'Pretendard';
+}
+
+:root {
+  --text-display-1: 700 56px/72px 'Pretendard', serif;
+  --text-display-2: 700 40px/52px 'Pretendard', serif;
+  --text-title-1: 700 36px/48px 'Pretendard', serif;
+  --text-title-2: 700 28px/38px 'Pretendard', serif;
+  --text-title-3: 700 24px/32px 'Pretendard', serif;
+  --text-heading-1: 700 22px/30px 'Pretendard', serif;
+  --text-heading-2: 700 20px/28px 'Pretendard', serif;
+  --text-heading-3: 700 18px/26px 'Pretendard', serif;
+  --text-body-1: 400 16px/24px 'Pretendard', serif;
+  --text-body-2: 500 16px/24px 'Pretendard', serif;
+  --text-body-3: 700 16px/24px 'Pretendard', serif;
+  --text-detail-1: 400 14px/20px 'Pretendard', serif;
+  --text-detail-2: 700 14px/20px 'Pretendard', serif;
+  --text-micro-1: 400 12px/16px 'Pretendard', serif;
+  --text-micro-2: 700 12px/16px 'Pretendard', serif;
+}
+
+.text-display-1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -0.056px;
+}
+
+.text-display-2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.04px;
+}
+
+.text-title-1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.18px;
+}
+
+.text-title-2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.14px;
+}
+
+.text-title-3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.12px;
+}
+
+.text-heading-1 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.004px;
+}
+
+.text-heading-2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.004px;
+}
+
+.text-heading-3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.004px;
+}
+
+.text-body-1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.008px;
+}
+
+.text-body-2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.008px;
+}
+
+.text-body-3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.008px;
+}
+
+.text-detail-1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.001px;
+}
+
+.text-detail-2 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.001px;
+}
+
+.text-micro-1 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.001px;
+}
+
+.text-micro-2 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.001px;
+}

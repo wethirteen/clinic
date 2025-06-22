@@ -39,3 +39,43 @@ const showHoldingsListInDesktop = () => {
 
 window.addEventListener('resize', showHoldingsListInDesktop)
 showHoldingsListInDesktop()
+
+// 0-2. 광고 팝업
+const $popupContainer = document.querySelector('.modal-popup')
+const $backdropContainer = document.querySelector('.backdrop')
+const $closePopupButton = document.querySelector('.modal-popup-close')
+const $closePopup24HourButton = document.querySelector('.modal-popup-24h-button')
+
+const openPopup = () => {
+  $popupContainer.classList.remove('is-hidden')
+  $backdropContainer.classList.add('is-open')
+}
+
+const closePopup = () => {
+  $popupContainer.classList.add('is-hidden')
+  $backdropContainer.classList.remove('is-open')
+}
+
+const closePopupFor24Hours = () => {
+  const today = new Date()
+  localStorage.setItem('popup-closed-time', today.getTime())
+  closePopup()
+}
+
+$closePopupButton.addEventListener('click', closePopup)
+$closePopup24HourButton.addEventListener('click', closePopupFor24Hours)
+
+const initPopup = () => {
+  const today = new Date()
+  const currentTime = today.getTime()
+  const setTime = localStorage.getItem('popup-closed-time')
+  const isOver24Hours = (currentTime - setTime) / (1000 * 60 * 60 * 24) >= 1
+
+  if (isOver24Hours) {
+    // 1일이 지났을 경우 다시 팝업을 노출
+    localStorage.removeItem('popup-closed-time')
+    openPopup()
+  }
+}
+
+initPopup()

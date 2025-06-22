@@ -45,15 +45,37 @@ li {
 }
 
 /* 0. 헤더 */
+.top-alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 40px;
+  background-color: #22355d;
+  color: #fff;
+  font: var(--text-body-2);
+  span {
+    color: #ffee99;
+  }
+
+  @media screen and (min-width: 786px) {
+    height: 80px;
+    font: var(--text-title-2);
+  }
+}
+
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
+  z-index: 300;
   width: 100%;
   height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
   border-bottom: 1px solid #d8d8d8;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: 300;
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
   @media screen and (min-width: 786px) {
     height: 60px;
@@ -97,6 +119,13 @@ li {
   outline: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.main {
+  margin-top: -40px;
+  @media screen and (min-width: 768px) {
+    margin-top: -60px;
+  }
 }
 
 /* 1. 인트로 */
@@ -440,6 +469,54 @@ li {
 }
 .modal-menu-link:hover {
   background-color: rgba(134, 168, 231, 0.15);
+}
+
+/* 0-2. 광고 팝업 */
+.modal-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  z-index: 600;
+}
+.modal-popup.is-hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-popup-content {
+  width: 80vw;
+  height: 75vh;
+  background-color: #fff;
+}
+.modal-popup-close {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+  i {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    i {
+      font-size: 40px;
+    }
+  }
+}
+.modal-popup-24h-button {
+  display: flex;
+  gap: 4px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* 백그라운드 (창 열릴 때) */

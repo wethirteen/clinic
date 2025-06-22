@@ -25,31 +25,35 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5ad13180845a28f1c561a87c9c592ffa" defer></script>
   </head>
   <body>
     <!-- 0. 헤더 -->
-    <header class="container">
-      <div class="row header">
-        <h1 class="col-sm-1 col-md-2 col-lg-8 header-title">
-          <a class="header-logo-button" href="/">
-            <img class="header-logo-image" src="./src/icon_logo.svg" alt="Clinic" />
-          </a>
-        </h1>
-        <nav class="col-md-2 col-lg-4 sm-hidden header-nav">
-          <a class="header-nav-link" href="#event">이벤트</a>
-          <a class="header-nav-link" href="#holdings">보유 장비</a>
-          <a class="header-nav-link" href="#hospital">병원 소개</a>
-          <a class="header-nav-link" href="#location">오시는 길</a>
-        </nav>
-        <div class="col-sm-1 sm-only header-nav-mobile">
-          <button class="header-nav-button" aria-label="메뉴 열기">
-            <i class="ph ph-list" style="color: #fff; font-size: 24px"></i>
-          </button>
-        </div>
+    <div class="row top-alert">
+      <p>2025년 00월 00일</p>
+      <p>클리닉의원 <span>00점</span> 그랜드 오픈!</p>
+    </div>
+
+    <header class="header">
+      <h1 class="col-sm-1 col-md-2 col-lg-8 header-title">
+        <a class="header-logo-button" href="/">
+          <img class="header-logo-image" src="./src/icon_logo.svg" alt="Clinic" />
+        </a>
+      </h1>
+      <nav class="col-md-2 col-lg-4 sm-hidden header-nav">
+        <a class="header-nav-link" href="#event">이벤트</a>
+        <a class="header-nav-link" href="#holdings">보유 장비</a>
+        <a class="header-nav-link" href="#hospital">병원 소개</a>
+        <a class="header-nav-link" href="#location">오시는 길</a>
+      </nav>
+      <div class="col-sm-1 sm-only header-nav-mobile">
+        <button class="header-nav-button" aria-label="메뉴 열기">
+          <i class="ph ph-list" style="color: #fff; font-size: 24px"></i>
+        </button>
       </div>
     </header>
 
-    <main>
+    <main class="main">
       <!-- 1. 인트로 -->
       <section class="intro">
         <p class="intro-text">예뻐지는 비결,<br />Clinic</p>
@@ -304,7 +308,7 @@
         </div>
         <div class="row">
           <div class="col-sm-2 col-md-2 col-lg-6">
-            <div class="location-map">카카오맵</div>
+            <div id="map" class="location-map"></div>
           </div>
           <div class="col-sm-2 col-md-2 col-lg-6">
             <div class="location-desc">상세 설명</div>
@@ -323,9 +327,22 @@
       </ul>
     </aside>
 
+    <!-- 0-2. 광고 팝업  -->
+    <aside class="modal-popup is-hidden">
+      <button class="modal-popup-close">
+        <i class="ph ph-x" style="color: #fff"></i>
+      </button>
+      <div class="modal-popup-content">팝업 영역입니다.</div>
+      <button class="modal-popup-24h-button">하루동안 보지 않기</button>
+    </aside>
+
     <!-- 백그라운드 (창 열릴 때) -->
     <aside class="backdrop"></aside>
-
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5ad13180845a28f1c561a87c9c592ffa"
+    ></script>
+    <script type="text/javascript" src="kakaomap.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
